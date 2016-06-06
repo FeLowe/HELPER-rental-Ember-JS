@@ -5,6 +5,7 @@ export default Ember.Route.extend({
     return this.store.findAll('rental');
   },
 
+// this change will be stashed
   actions: {
     save3(params) {
       var newRental = this.store.createRecord('rental', params);
