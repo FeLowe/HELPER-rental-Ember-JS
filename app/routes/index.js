@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model() {
-    return this.store.findAll('rental');
-  },
+  return Ember.RSVP.hash({
+    cities: this.store.findAll('city'),
+    rentals: this.store.findAll('rental')
+  });
+},
 
 // this change will be stashed
   actions: {
