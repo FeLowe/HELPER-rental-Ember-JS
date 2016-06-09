@@ -8,7 +8,7 @@ export default Ember.Route.extend({
   });
 },
 
-// this change will be stashed
+
   actions: {
     save3(params) {
       var newRental = this.store.createRecord('rental', params);
